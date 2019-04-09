@@ -7,9 +7,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.example.mypage2.R;
-import com.example.mypage2.profileExtend;
-
 import java.util.Random;
 
 
@@ -27,17 +24,17 @@ public class person2_main extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_person5_main);
+        setContentView(R.layout.activity_person2_main);
 
-        linkTxt = findViewById(R.id.likeCnt);
-        followTxt = findViewById(R.id.followerCnt);
+        linkTxt = findViewById(R.id.person2_likeCnt);
+        followTxt = findViewById(R.id.person2_followerCnt);
 
         linkTxt.setText(String.valueOf(likesCnt));
         followTxt.setText(String.valueOf(followersCnt));
 
-        about = findViewById(R.id.AboutMeButt);
-        like = findViewById(R.id.LikeButt);
-        follow = findViewById(R.id.FollowButt);
+        about = findViewById(R.id.person2_AboutMeButt);
+        like = findViewById(R.id.person2_LikeButt);
+        follow = findViewById(R.id.person2_FollowButt);
 
 
 
@@ -66,7 +63,7 @@ public class person2_main extends AppCompatActivity {
     }
 
     public void openExtendPage(){
-        Intent intent = new Intent(this, profileExtend.class);
+        Intent intent = new Intent(this, person2_extend.class);
         intent.putExtra("likesCnt",likesCnt);
         intent.putExtra("followersCnt",followersCnt);
         startActivity(intent);

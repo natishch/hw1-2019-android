@@ -4,35 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:id="@+id/constraint_layout">
+    tools:context=".person1_main"
+    android:id="@+id/person1_layout">
 
     <ImageView
-        android:id="@+id/cover"
+        android:id="@+id/person1_cover"
         android:layout_width="0dp"
-        android:layout_height="550dp"
+        android:layout_height="500dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/koko2" />
+        app:srcCompat="@drawable/person1_cover" />
 
     <ImageView
-        android:id="@+id/profile"
+        android:id="@+id/person1_profile"
         android:layout_width="112dp"
         android:layout_height="112dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cover"
+        app:layout_constraintBottom_toBottomOf="@+id/person1_cover"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/person1_cover"
         app:layout_constraintVertical_bias="0.491"
-        app:srcCompat="@drawable/koko1" />
+        app:srcCompat="@drawable/person1" />
 
     <TextView
-        android:id="@+id/likeCnt"
+        android:id="@+id/person1_likeCnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -41,11 +41,11 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toEndOf="@+id/profile"
-        app:layout_constraintTop_toBottomOf="@+id/cover" />
+        app:layout_constraintStart_toEndOf="@+id/person1_profile"
+        app:layout_constraintTop_toBottomOf="@+id/person1_cover" />
 
     <TextView
-        android:id="@+id/likesText"
+        android:id="@+id/person1_likesText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -54,11 +54,11 @@
         android:text="Likes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
-        app:layout_constraintStart_toEndOf="@+id/profile"
-        app:layout_constraintTop_toBottomOf="@+id/likeCnt" />
+        app:layout_constraintStart_toEndOf="@+id/person1_profile"
+        app:layout_constraintTop_toBottomOf="@+id/person1_likeCnt" />
 
     <TextView
-        android:id="@+id/followerCnt"
+        android:id="@+id/person1_followerCnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -67,11 +67,11 @@
         android:text="followCnt"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/profile"
-        app:layout_constraintTop_toBottomOf="@+id/cover" />
+        app:layout_constraintStart_toEndOf="@+id/person1_profile"
+        app:layout_constraintTop_toBottomOf="@+id/person1_cover" />
 
     <TextView
-        android:id="@+id/followersText"
+        android:id="@+id/person1_followersText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -80,12 +80,12 @@
         android:text="Followers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.597"
-        app:layout_constraintStart_toEndOf="@+id/profile"
-        app:layout_constraintTop_toBottomOf="@+id/followerCnt" />
+        app:layout_constraintStart_toEndOf="@+id/person1_profile"
+        app:layout_constraintTop_toBottomOf="@+id/person1_followerCnt" />
 
 
     <ImageButton
-        android:id="@+id/LikeButt"
+        android:id="@+id/person1_LikeButt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -97,12 +97,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.202"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile"
+        app:layout_constraintTop_toBottomOf="@+id/person1_profile"
         app:layout_constraintVertical_bias="0.517"
         app:srcCompat="@drawable/ic_thumb_up" />
 
     <ImageButton
-        android:id="@+id/FollowButt"
+        android:id="@+id/person1_FollowButt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -111,13 +111,13 @@
         android:layout_marginBottom="8dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/AboutMeButt"
-        app:layout_constraintStart_toEndOf="@+id/LikeButt"
-        app:layout_constraintTop_toBottomOf="@+id/profile"
+        app:layout_constraintEnd_toStartOf="@+id/person1_AboutMeButt"
+        app:layout_constraintStart_toEndOf="@+id/person1_LikeButt"
+        app:layout_constraintTop_toBottomOf="@+id/person1_profile"
         app:srcCompat="@drawable/ic_followe" />
 
     <Button
-        android:id="@+id/AboutMeButt"
+        android:id="@+id/person1_AboutMeButt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -126,16 +126,16 @@
         android:layout_marginBottom="8dp"
         android:background="@color/white"
         android:text="About me"
-        android:textSize="10sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.83"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile" />
+        app:layout_constraintTop_toBottomOf="@+id/person1_profile" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/person1_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Koko the gorilla"
@@ -144,8 +144,8 @@
         android:layout_marginEnd="358dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.597"
-        app:layout_constraintStart_toEndOf="@+id/profile"
-        app:layout_constraintTop_toBottomOf="@+id/followerCnt" />
+        app:layout_constraintStart_toEndOf="@+id/person1_profile"
+        app:layout_constraintTop_toBottomOf="@+id/person1_followerCnt" />
 
 
 </android.support.constraint.ConstraintLayout>

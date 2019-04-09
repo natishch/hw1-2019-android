@@ -19,68 +19,73 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int likesCnt = getRandomNumberInRange(100,500);
-    private int followersCnt = getRandomNumberInRange(100,400);
-    private Button about;
-    private ImageButton like;
-    private ImageButton follow;
-    private TextView linkTxt;
-    private TextView followTxt;
-
+    private ImageView per1;
+    private ImageView per2;
+    private ImageView per3;
+    private ImageView per4;
+    private ImageView per5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        linkTxt = findViewById(R.id.likeCnt);
-        followTxt = findViewById(R.id.followerCnt);
-        linkTxt.setText(String.valueOf(likesCnt));
-        followTxt.setText(String.valueOf(followersCnt));
 
-        about = findViewById(R.id.AboutMeButt);
-        like = findViewById(R.id.LikeButt);
-        follow = findViewById(R.id.FollowButt);
+        per1 = findViewById(R.id.person1_profile_main);
+        per2 = findViewById(R.id.person2_profile_main);
+        per3 = findViewById(R.id.person3_profile_main);
+        per4 = findViewById(R.id.person4_profile_main);
+        per5 = findViewById(R.id.person5_profile_main);
 
-
-
-        about.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                openExtendPage();
-            }
-        });
-
-        like.setOnClickListener(new View.OnClickListener() {
+        per1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                likesCnt++;
-                linkTxt.setText(String.valueOf(likesCnt));
+                openExtendPage(1);
+
             }
         });
-
-        follow.setOnClickListener(new View.OnClickListener() {
+        per2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                followersCnt++;
-                followTxt.setText(String.valueOf(followersCnt));
+                openExtendPage(2);
             }
         });
+        per3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openExtendPage(3);
+            }
+        });
+        per4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openExtendPage(4);
+            }
+        });
+        per5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openExtendPage(5);
+            }
+        });
+
     }
 
-    public void openExtendPage(){
-        Intent intent = new Intent(this, profileExtend.class);
-        intent.putExtra("likesCnt",likesCnt);
-        intent.putExtra("followersCnt",followersCnt);
-        startActivity(intent);
-    }
-
-    private static int getRandomNumberInRange(int min, int max) {
-
-        if (min >= max) {
-            throw new IllegalArgumentException("max must be greater than min");
+    public void openExtendPage(int personNum){
+        Intent intent = new Intent();
+        switch (personNum){
+            case 1: intent = new Intent(this, person1_main.class);
+                    break;
+            case 2: intent = new Intent(this, person2_main.class);
+                    break;
+            case 3: intent = new Intent(this, activity_person3_main.class);
+                    break;
+            case 4: intent = new Intent(this, person4_main.class);
+                    break;
+            case 5: intent = new Intent(this, person5_main.class);
+                    break;
+            default: break;
         }
 
-        Random r = new Random();
-        return r.nextInt((max - min) + 1) + min;
+            startActivity(intent);
     }
 }

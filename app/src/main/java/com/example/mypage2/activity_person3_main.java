@@ -63,7 +63,7 @@ public class activity_person3_main extends AppCompatActivity {
     }
 
     public void openExtendPage(){
-        Intent intent = new Intent(this, profileExtend.class);
+        Intent intent = new Intent(this, activity_person3_extend.class);
         intent.putExtra("likesCnt",likesCnt);
         intent.putExtra("followersCnt",followersCnt);
         startActivity(intent);

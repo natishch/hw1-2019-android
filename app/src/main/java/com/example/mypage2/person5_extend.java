@@ -21,8 +21,8 @@ public class person5_extend extends AppCompatActivity {
         likesCnt = intent.getIntExtra("likesCnt",0);
         followersCnt = intent.getIntExtra("followersCnt",0);
 
-        likes = findViewById(R.id.likesCntE);
-        followers = findViewById(R.id.followersCntE);
+        likes = findViewById(R.id.person5_likesCntE);
+        followers = findViewById(R.id.person5_followersCntE);
 
         likes.setText(String.valueOf(likesCnt));
         followers.setText(String.valueOf(followersCnt));

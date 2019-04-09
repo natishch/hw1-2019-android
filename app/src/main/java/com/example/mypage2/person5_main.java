@@ -26,15 +26,15 @@ public class person5_main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person5_main);
 
-        linkTxt = findViewById(R.id.likeCnt);
-        followTxt = findViewById(R.id.followerCnt);
+        linkTxt = findViewById(R.id.person5_likeCnt);
+        followTxt = findViewById(R.id.person5_followerCnt);
 
         linkTxt.setText(String.valueOf(likesCnt));
         followTxt.setText(String.valueOf(followersCnt));
 
-        about = findViewById(R.id.AboutMeButt);
-        like = findViewById(R.id.LikeButt);
-        follow = findViewById(R.id.FollowButt);
+        about = findViewById(R.id.person5_AboutMeButt);
+        like = findViewById(R.id.person5_LikeButt);
+        follow = findViewById(R.id.person5_FollowButt);
 
 
 
@@ -63,7 +63,7 @@ public class person5_main extends AppCompatActivity {
     }
 
     public void openExtendPage(){
-        Intent intent = new Intent(this, profileExtend.class);
+        Intent intent = new Intent(this, person5_extend.class);
         intent.putExtra("likesCnt",likesCnt);
         intent.putExtra("followersCnt",followersCnt);
         startActivity(intent);
